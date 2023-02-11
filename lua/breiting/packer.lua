@@ -1,9 +1,9 @@
 -- Install packer
+-- This file is not loaded automatically but needs to be sourced with :so and then
+-- call PackerSync to install all packages
 --
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-local is_bootstrap = false
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  is_bootstrap = true
   vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
   vim.cmd [[packadd packer.nvim]]
 end
@@ -25,7 +25,7 @@ require('packer').startup(function(use)
 	-- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
-	-- Nice color scheme
+	-- Nice color scheme rose-pine
 	use{
 		'rose-pine/neovim',
 		as = 'rose-pine',
@@ -33,6 +33,8 @@ require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	}
+
+    use 'navarasu/onedark.nvim'
 
 	-- Highlight, edit, and navigate code
 	use {'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'}}
@@ -62,8 +64,10 @@ require('packer').startup(function(use)
 		}
 	}
 
+    use {'numToStr/Comment.nvim'} -- "gc" to comment visual regions/lines 
+
     -- Others
     use {'fatih/vim-go'}
     use {'jlanzarotta/bufexplorer'}
-
+    use {'tpope/vim-fugitive'}
 end)

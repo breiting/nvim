@@ -7,3 +7,5 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<leader>t", "<cmd>NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader><Esc>", "<cmd>BufExplorer<CR>")
 vim.keymap.set("n", "<leader>gs", "<cmd>G<CR>")
+
+vim.keymap.set("n", "<leader>ff", "<cmd>Autoformat<CR>")

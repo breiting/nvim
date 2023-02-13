@@ -70,4 +70,6 @@ require('packer').startup(function(use)
     use {'fatih/vim-go'}
     use {'jlanzarotta/bufexplorer'}
     use {'tpope/vim-fugitive'}
+    use {'Chiel92/vim-autoformat'}
+
 end)

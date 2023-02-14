@@ -66,10 +66,12 @@ require('packer').startup(function(use)
 
     use {'numToStr/Comment.nvim'} -- "gc" to comment visual regions/lines 
 
+    -- Autoformater with LSP
+    use {'lukas-reineke/lsp-format.nvim'}
+
     -- Others
     use {'fatih/vim-go'}
     use {'jlanzarotta/bufexplorer'}
     use {'tpope/vim-fugitive'}
-    use {'Chiel92/vim-autoformat'}
 
 end)

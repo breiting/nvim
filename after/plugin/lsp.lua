@@ -4,6 +4,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
+  'clangd',
   'lua_ls',
   'rust_analyzer',
 })
@@ -65,4 +66,15 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+-- LSP Formatter
+require("lsp-format").setup {}
+
+require("lspconfig").gopls.setup { 
+    on_attach = require("lsp-format").on_attach 
+}
+
+require'lspconfig'.clangd.setup {
+    on_attach = require("lsp-format").on_attach 
+}
 

@@ -8,5 +8,4 @@ vim.keymap.set("n", "<leader>t", "<cmd>NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader><Esc>", "<cmd>BufExplorer<CR>")
 vim.keymap.set("n", "<leader>gs", "<cmd>G<CR>")
 
-vim.keymap.set("n", "<leader>ff", "<cmd>Autoformat<CR>")
 vim.keymap.set("n", "<leader>ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")

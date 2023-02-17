@@ -1,6 +1,11 @@
 require('onedark').setup {
-    style = 'darker'
+    style = 'warmer',
+    highlights = {
+        ["@comment"] = {fg = '$orange'}
+    }
 }
+
+-- hello world
 
 require('onedark').load()
 vim.o.termguicolors = true

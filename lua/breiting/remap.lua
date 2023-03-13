@@ -11,4 +11,5 @@ vim.keymap.set("n", "<leader>gs", "<cmd>G<CR>")
 vim.keymap.set("n", "<leader>ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>:w<CR>")
 

@@ -56,6 +56,20 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+-- Python languange server
+ require'lspconfig'.pylsp.setup{
+   settings = {
+     pylsp = {
+       plugins = {
+         pycodestyle = {
+           ignore = {'W391'},
+           maxLineLength = 100
+         }
+       }
+     }
+   }
+ }
+
 -- Lua language server
 require'lspconfig'.lua_ls.setup {
   settings = {

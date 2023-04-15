@@ -16,7 +16,7 @@ require('packer').startup(function(use)
 
     -- Nvimtree
     use { 'nvim-tree/nvim-tree.lua' }
-    use { 'kyazdani42/nvim-tree.lua' }
+    use { 'nvim-tree/nvim-web-devicons' }
 
     -- Fuzzy Finder (files, lsp, etc)
     use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
@@ -60,6 +60,12 @@ require('packer').startup(function(use)
 
     -- Autoformater with LSP
     use { 'lukas-reineke/lsp-format.nvim' }
+
+    -- lua-line
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     -- Others
     use { 'fatih/vim-go' }

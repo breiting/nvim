@@ -29,7 +29,7 @@ vim.g.netrw_winsize = 25
 -- Window specific
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.wo.colorcolumn = '80'
+vim.wo.colorcolumn = '100'
 vim.wo.cursorline = true
 vim.wo.wrap = false
 vim.wo.signcolumn = 'yes'
@@ -37,7 +37,7 @@ vim.wo.list = true
 
 -- Buffer specific
 
-vim.bo.textwidth = 80
+vim.bo.textwidth = 100
 vim.bo.tabstop = 4
 vim.bo.softtabstop = 4
 vim.bo.shiftwidth = 4

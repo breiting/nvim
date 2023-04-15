@@ -64,5 +64,5 @@ require('packer').startup(function(use)
     -- Others
     use { 'fatih/vim-go' }
     use { 'jlanzarotta/bufexplorer' }
-    use {'lewis6991/gitsigns.nvim'}
+    use { 'lewis6991/gitsigns.nvim' }
 end)

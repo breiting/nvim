@@ -15,8 +15,8 @@ require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Nvimtree
-    use 'kyazdani42/nvim-web-devicons'
-    use 'kyazdani42/nvim-tree.lua'
+    use { 'nvim-tree/nvim-tree.lua' }
+    use { 'kyazdani42/nvim-tree.lua' }
 
     -- Fuzzy Finder (files, lsp, etc)
     use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }

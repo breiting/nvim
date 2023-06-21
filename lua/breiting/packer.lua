@@ -58,6 +58,9 @@ require('packer').startup(function(use)
     -- Comment out regions and lines
     use { 'numToStr/Comment.nvim' }
 
+    -- Tmux navigator
+    use { 'christoomey/vim-tmux-navigator' }
+
     -- Autoformater with LSP
     use { 'lukas-reineke/lsp-format.nvim' }
 

@@ -20,6 +20,8 @@ vim.o.smartindent = true
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
+vim.o.termguicolors = true
+
 vim.g.mapleader = " "
 
 vim.g.netrw_browse_split = 0

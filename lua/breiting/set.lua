@@ -43,10 +43,6 @@ vim.bo.softtabstop = 4
 vim.bo.shiftwidth = 4
 vim.bo.expandtab = true
 
---- nvim-tree
--- vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache', '.aux', '.out', '.gz', '.fls' }
-vim.g.nvim_tree_width = 40
-
 --- LaTeX
 vim.g.tex_flavor = 'latex'
 vim.g.vimtex_view_general_viewer = 'open'

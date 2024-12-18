@@ -39,6 +39,13 @@ require("mason-lspconfig").setup_handlers({
         }
     end,
 
+    ["openscad_lsp"] = function()
+        require('lspconfig').openscad_lsp.setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+        }
+    end,
+
     ["lua_ls"] = function()
         require('neodev').setup()
         require('lspconfig').lua_ls.setup {
@@ -61,7 +68,10 @@ require("mason-lspconfig").setup_handlers({
                         pycodestyle = {
                             ignore = { 'W391' },
                             maxLineLength = 100
-                        }
+                        },
+                        rope_autoimport = {
+                            enabled = true,
+                        },
                     }
                 }
             }
@@ -81,5 +91,13 @@ require 'lspconfig'.clangd.setup {
 }
 
 require 'lspconfig'.pylsp.setup {
+    on_attach = require("lsp-format").on_attach
+}
+
+require 'lspconfig'.lemminx.setup {
+    on_attach = require("lsp-format").on_attach
+}
+
+require 'lspconfig'.openscad_lsp.setup {
     on_attach = require("lsp-format").on_attach
 }

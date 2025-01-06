@@ -1,3 +1,7 @@
-# neovim configuration
+# neovim configuration - ARCHIVED
 
-This repository is my private neovim configuration based on lua exclusively.
+This is my old neovim configuration setup, which is now outdated.
+
+Please see my new configuration in my dotfiles repository:
+
+https://github.com/breiting/dotfiles
